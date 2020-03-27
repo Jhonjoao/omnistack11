@@ -3,12 +3,27 @@
 module.exports = {
 
   development: {
+    //config your database, in this case is just local db
     client: 'mysql',
     connection: {
       host : '127.0.0.1',
       user : 'root',
       password : 'root',
       database : 'omnistack',
+      port: 8889,
+    },
+    migrations: {
+      directory: './src/database/migrations'
+    }
+  },
+
+  test: {
+    client: 'mysql',
+    connection: {
+      host : '127.0.0.1',
+      user : 'root',
+      password : 'root',
+      database : 'testes',
       port: 8889,
     },
     migrations: {
